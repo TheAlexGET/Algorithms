@@ -10,7 +10,7 @@ graph.e = ['f']
 graph.f = ['g']
 
 
-function breathSearch(graph, start, end){
+function breadthSearch(graph, start, end){
     let queue = []
     queue.push(start)
     while(queue.length > 0){
@@ -25,6 +25,19 @@ function breathSearch(graph, start, end){
             console.log(queue)
         }
     }
+    return false
 }
 
-console.log(breathSearch(graph, 'a', 'g'))
+console.log(breadthSearch(graph, 'a', 'f'))
+
+
+//Алгоритм Дейкстры для поиска кратчайшего пути
+const matrix = [
+    [0,1,1,0,0,0,0],
+    [0,0,0,0,1,0,0],
+    [0,0,0,1,0,1,0],
+    [0,0,0,0,1,0,0],
+    [0,0,0,0,0,0,1],
+    [0,0,0,0,1,0,0],
+    [0,0,0,0,0,0,0],
+]
