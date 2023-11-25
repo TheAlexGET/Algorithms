@@ -9,9 +9,10 @@ graph.d = ['f']
 graph.e = ['f']
 graph.f = ['g']
 
-
+console.log(graph)
 function breadthSearch(graph, start, end){
     let queue = []
+    let path = []
     queue.push(start)
     while(queue.length > 0){
         const current = queue.shift()
@@ -19,16 +20,18 @@ function breadthSearch(graph, start, end){
             graph[current]  = []
         }
         if(graph[current].includes(end)){
-            return true
+            path.push(current + '->')
+            path.push(end)
+            return {path: path.toString().replace(/,/g,''), status: true}
         } else{
+            path.push(current + '->')
             queue = [...queue, ...graph[current]]
-            console.log(queue)
         }
     }
     return false
 }
 
-console.log(breadthSearch(graph, 'a', 'f'))
+console.log(breadthSearch(graph, 'a', 'c'))
 
 
 //Алгоритм Дейкстры для поиска кратчайшего пути
