@@ -1,12 +1,11 @@
 //MAP
 const map = new Map()
 
-map.set('Alex', 'Sucevan') //String key
-console.log(map.get('Alex')) //Getting value
+map.set('test', 'string') //String key
+console.log(map.get('test')) //Getting value
 
 const testObj = {
-    name: 'Alisa',
-    age: 21,
+    name: 'testObject',
 }
 
 map.set(testObj, 'aadff') //Object key
