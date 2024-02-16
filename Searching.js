@@ -16,7 +16,7 @@ function LinearSearch(array, arg) {
 //Binary Search
 let arr_2 = [];
 
-for(let i = 0; i <= 1000; i++){
+for(let i = 0; i <= 1000000; i++){
     arr_2.push(i)
 }
 
@@ -61,5 +61,5 @@ function RecursiveBinarySearch(array, arg, start, end){
     }
 }
 
-console.log(RecursiveBinarySearch(arr_2, 740, 0, arr_2.length))
+console.log(RecursiveBinarySearch(arr_2, 7400, 0, arr_2.length))
 console.log(count)
